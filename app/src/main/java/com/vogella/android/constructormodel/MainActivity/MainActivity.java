@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 import android.widget.Button;
 
 import com.vogella.android.constructormodel.R;
@@ -43,14 +42,13 @@ public class MainActivity extends Activity {
             list.add(constructor[i]);
             i++;
         }// define an adapter
-        mAdapter = new MyAdapter(list);
-        recyclerView.setAdapter(mAdapter);
-        playbutton.setOnClickListener(new View.OnClickListener() {
+        mAdapter = new MyAdapter(list, new MyAdapter.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onItemClick(String item) {
                 Intent button = new Intent(MainActivity.this, SecondActivity.class);
                 startActivity(button);
             }
         });
+        recyclerView.setAdapter(mAdapter);
     }
 }
