@@ -1,4 +1,4 @@
-package com.vogella.android.constructormodel.SecondActivity.model;
+package com.vogella.android.constructormodel.Voiture.SecondActivity.model;
 
 import java.util.List;
 

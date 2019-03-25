@@ -1,13 +1,13 @@
-package com.vogella.android.constructormodel.SecondActivity.Controller;
+package com.vogella.android.constructormodel.Voiture.SecondActivity.Controller;
 
 import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.vogella.android.constructormodel.SecondActivity.GerritAPI;
-import com.vogella.android.constructormodel.SecondActivity.SecondActivity;
-import com.vogella.android.constructormodel.SecondActivity.model.RestVehicleResponse;
-import com.vogella.android.constructormodel.SecondActivity.model.Vehicle;
+import com.vogella.android.constructormodel.Voiture.SecondActivity.GerritAPI;
+import com.vogella.android.constructormodel.Voiture.SecondActivity.SecondActivity;
+import com.vogella.android.constructormodel.Voiture.SecondActivity.model.RestVehicleResponse;
+import com.vogella.android.constructormodel.Voiture.SecondActivity.model.Vehicle;
 
 import java.util.List;
 
@@ -23,7 +23,7 @@ public class MainController {
         this.view = Activity;
     }
 
-    public void onCreate(){
+    public void onCreate(int id){
         Gson gson = new GsonBuilder()
                 .setLenient()
                 .create();
@@ -34,7 +34,7 @@ public class MainController {
                 .build();
 
         GerritAPI gerritAPI = retrofit.create(GerritAPI.class);
-        Call<RestVehicleResponse> call = gerritAPI.getListVehicles(2015, "json");
+        Call<RestVehicleResponse> call = gerritAPI.getListVehicles(id, "car", "json");
         call.enqueue(new Callback<RestVehicleResponse>() {
             @Override
             public void onResponse(Call<RestVehicleResponse> call, Response<RestVehicleResponse> response) {

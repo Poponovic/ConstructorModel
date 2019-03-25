@@ -1,4 +1,4 @@
-package com.vogella.android.constructormodel.SecondActivity;
+package com.vogella.android.constructormodel.Voiture.SecondActivity;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 
 import com.vogella.android.constructormodel.R;
-import com.vogella.android.constructormodel.SecondActivity.model.Vehicle;
+import com.vogella.android.constructormodel.Voiture.SecondActivity.model.Vehicle;
 
 import java.util.List;
 

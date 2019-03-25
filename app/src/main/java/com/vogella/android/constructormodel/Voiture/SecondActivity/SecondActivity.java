@@ -1,4 +1,4 @@
-package com.vogella.android.constructormodel.SecondActivity;
+package com.vogella.android.constructormodel.Voiture.SecondActivity;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,8 +6,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.vogella.android.constructormodel.R;
-import com.vogella.android.constructormodel.SecondActivity.Controller.MainController;
-import com.vogella.android.constructormodel.SecondActivity.model.Vehicle;
+import com.vogella.android.constructormodel.Voiture.SecondActivity.Controller.MainController;
+import com.vogella.android.constructormodel.Voiture.SecondActivity.model.Vehicle;
 
 import java.util.List;
 
@@ -33,8 +33,9 @@ public class SecondActivity<recyclerView> extends Activity {
         // in content do not change the layout size
         // of the RecyclerView
 
+        int id = getIntent().getIntExtra("KEY", 0);
         controller = new MainController(this);
-        controller.onCreate();
+        controller.onCreate(id);
     }
 
     public void showList(List<Vehicle> listVehicle){

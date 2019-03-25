@@ -1,4 +1,4 @@
-package com.vogella.android.constructormodel.SecondActivity.model;
+package com.vogella.android.constructormodel.Voiture.SecondActivity.model;
 
 public class Vehicle {
     String Make_Name;
