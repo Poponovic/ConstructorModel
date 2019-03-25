@@ -1,4 +1,4 @@
-package com.vogella.android.constructormodel.MainActivity;
+package com.vogella.android.constructormodel.Voiture.MainActivity;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,15 +7,16 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.vogella.android.constructormodel.R;
+import com.vogella.android.constructormodel.Voiture.SecondActivity.model.Marque;
 
 import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
-    private List<String> values;
+    private List<Marque> values;
     private final OnItemClickListener listener;
 
     public interface OnItemClickListener {
-        void onItemClick(String item);
+        void onItemClick(Marque item);
     }
 
     // Provide a reference to the views for each data item
@@ -36,7 +37,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public MyAdapter(List<String> myDataset, OnItemClickListener listener) {
+    public MyAdapter(List<Marque> myDataset, OnItemClickListener listener) {
         values = myDataset;
         this.listener = listener;
     }
@@ -59,12 +60,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, final int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        final String name = values.get(position);
-        holder.txtHeader.setText(name);
+        final Marque marque = values.get(position);
+        holder.txtHeader.setText(marque.getName());
         holder.playbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                listener.onItemClick(name);
+                listener.onItemClick(marque);
             }
         });
     }
