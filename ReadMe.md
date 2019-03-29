@@ -11,11 +11,17 @@ Cette application affiche donc tous les modèles d'un constructeur recueillis gr
 Consignes respectées
 
 Architecture & MCV
+
 Appels REST
+
 Affichage de plusieurs listes dans des RecyclerView
+
 Affichage d'un item d'une liste 
-Ecrans : 6 activités 
+
+Ecrans : 6 activités
+
 Fonctions supplémentaires : 
+	
 	-Placement d'un écran d'accueil 
 	-Fond d'écran sur deux écrans 
 	-Intégration d'une barre de recherche 
