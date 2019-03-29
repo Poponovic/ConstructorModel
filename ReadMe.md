@@ -16,9 +16,9 @@ Affichage de plusieurs listes dans des RecyclerView
 Affichage d'un item d'une liste 
 Ecrans : 6 activités 
 Fonctions supplémentaires : 
-		1) Placement d'un écran d'accueil 
-		2) Fond d'écran sur deux écrans 
-		3) Intégration d'une barre de recherche 
+	-Placement d'un écran d'accueil 
+	-Fond d'écran sur deux écrans 
+	-Intégration d'une barre de recherche 
 
 
 Fonctionnalités
