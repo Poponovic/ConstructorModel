@@ -33,43 +33,43 @@ Cette application affiche donc tous les modèles d'un constructeur recueillis gr
 
 <h2>Fonctionnalités:</h2>
 
-	<h2>HomePage</h2>
+   <h2>HomePage</h2>
 
 Le premier écran affiche une image de logo pendant 5 secondes.
 
 <img src="image_readme/HomePage.png" alt="HomePage">
 
 
-	<h2>Ecran d'accueil</h2>
+   <h2>Ecran d'accueil</h2>
 
 Cet écran permet de choisir le type de véhicule qu'on veut choisir. 
 
  <img src="image_readme/Accueil.png" alt="Accueil">
 
 
-	<h3>Ecran avec la liste des voitures</h3>
+  <h3>Ecran avec la liste des voitures</h3>
 
 Affiche la liste de tous les constructeurs de voitures.
 
  <img src="image_readme/liste_voiture.png" alt="Liste Voiture">
 
-	<h2>Ecran avec les modèles de voiture</h2>
+  <h2>Ecran avec les modèles de voiture</h2>
 
 Modèle de chaque constructeur.
 
  <img src="image_readme/liste_modele.png" alt="Liste Modele Voiture">
 	
-	<h2>Ecran avec la liste des motos</h2>
+  <h2>Ecran avec la liste des motos</h2>
 
 Affiche la liste de tous les constructeurs de motos.
 
 <img src="image_readme/liste_moto.png" alt="Liste Moto">
 
-	<h2>Ecran avec les modèles de motos</h2>
+  <h2>Ecran avec les modèles de motos</h2>
 
 <img src="image_readme/liste_modele &.png" alt="Liste Modele Moto">
  
-	<h2>Ecran avec la barre de recherche</h2>
+  <h2>Ecran avec la barre de recherche</h2>
 
 Lorsqu'on entre une recherche pour une marque, cela nous affiche les compatibilités.
 
