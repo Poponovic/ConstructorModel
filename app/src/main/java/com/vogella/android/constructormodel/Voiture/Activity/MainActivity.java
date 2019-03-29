@@ -3,7 +3,7 @@ package com.vogella.android.constructormodel.Voiture.Activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Button;
 import android.widget.SearchView;
@@ -31,6 +31,7 @@ public class MainActivity extends Activity implements SearchView.OnQueryTextList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
 
         playbutton = (Button) findViewById(R.id.button);
 
@@ -87,8 +88,8 @@ public class MainActivity extends Activity implements SearchView.OnQueryTextList
 
         recyclerView.setHasFixedSize(true);
         // use a linear layout manager
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
+        //layoutManager = new LinearLayoutManager(this);
+        //recyclerView.setLayoutManager(layoutManager);
 
         searchView = (SearchView) findViewById(R.id.search_view);
         searchView.setOnQueryTextListener(this);

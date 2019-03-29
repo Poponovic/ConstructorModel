@@ -1,6 +1,6 @@
-package com.vogella.android.constructormodel.Voiture.Moto.SecondMotoActivity;
+package com.vogella.android.constructormodel.Voiture.Controller;
 
-import com.vogella.android.constructormodel.Voiture.Moto.SecondMotoActivity.Model.RestMotoResponse;
+import com.vogella.android.constructormodel.Voiture.Model.RestMotoResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

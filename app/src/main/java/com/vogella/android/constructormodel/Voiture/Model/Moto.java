@@ -1,4 +1,4 @@
-package com.vogella.android.constructormodel.Voiture.Moto.SecondMotoActivity.Model;
+package com.vogella.android.constructormodel.Voiture.Model;
 
 public class Moto {
     String Make_Name;

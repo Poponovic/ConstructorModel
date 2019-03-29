@@ -1,4 +1,4 @@
-package com.vogella.android.constructormodel.Voiture.Moto.SecondMotoActivity;
+package com.vogella.android.constructormodel.Voiture.Activity;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,8 +6,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.vogella.android.constructormodel.R;
-import com.vogella.android.constructormodel.Voiture.Moto.SecondMotoActivity.Model.Moto;
-import com.vogella.android.constructormodel.Voiture.Moto.SecondMotoActivity.SecondController.SecondController;
+import com.vogella.android.constructormodel.Voiture.Model.Moto;
+import com.vogella.android.constructormodel.Voiture.Controller.SecondController;
 
 import java.util.List;
 

@@ -1,13 +1,12 @@
-package com.vogella.android.constructormodel.Voiture.Moto.SecondMotoActivity.SecondController;
+package com.vogella.android.constructormodel.Voiture.Controller;
 
 import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.vogella.android.constructormodel.Voiture.Moto.SecondMotoActivity.GerritAPIMoto;
-import com.vogella.android.constructormodel.Voiture.Moto.SecondMotoActivity.Model.Moto;
-import com.vogella.android.constructormodel.Voiture.Moto.SecondMotoActivity.Model.RestMotoResponse;
-import com.vogella.android.constructormodel.Voiture.Moto.SecondMotoActivity.MotoActivitySecond;
+import com.vogella.android.constructormodel.Voiture.Model.Moto;
+import com.vogella.android.constructormodel.Voiture.Model.RestMotoResponse;
+import com.vogella.android.constructormodel.Voiture.Activity.MotoActivitySecond;
 
 import java.util.List;
 

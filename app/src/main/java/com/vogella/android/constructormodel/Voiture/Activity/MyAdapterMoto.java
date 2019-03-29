@@ -1,4 +1,4 @@
-package com.vogella.android.constructormodel.Voiture.Moto.FirstMotoActivity;
+package com.vogella.android.constructormodel.Voiture.Activity;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,8 +7,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.vogella.android.constructormodel.R;
-import com.vogella.android.constructormodel.Voiture.Moto.SecondMotoActivity.Model.MarqueMoto;
+import com.vogella.android.constructormodel.Voiture.Model.MarqueMoto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MyAdapterMoto extends RecyclerView.Adapter<MyAdapterMoto.ViewHolder> {
@@ -68,6 +69,12 @@ public class MyAdapterMoto extends RecyclerView.Adapter<MyAdapterMoto.ViewHolder
                 listener.onItemClick(marquemoto);
             }
         });
+    }
+
+    public void setFilter(List<MarqueMoto> marques){
+        values = new ArrayList<>();
+        values.addAll(marques);
+        notifyDataSetChanged();
     }
 
     // Return the size of your dataset (invoked by the layout manager)

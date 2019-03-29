@@ -1,4 +1,4 @@
-package com.vogella.android.constructormodel.Voiture.Moto.SecondMotoActivity;
+package com.vogella.android.constructormodel.Voiture.Activity;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.vogella.android.constructormodel.R;
-import com.vogella.android.constructormodel.Voiture.Moto.SecondMotoActivity.Model.Moto;
+import com.vogella.android.constructormodel.Voiture.Model.Moto;
 
 import java.util.List;
 
@@ -20,14 +20,12 @@ public class MyAdapterMoto_second extends RecyclerView.Adapter<MyAdapterMoto_sec
     public class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
         public TextView txtHeader_second;
-        public TextView txtFooter_second;
         public View layout_second;
 
         public ViewHolder(View v) {
             super(v);
             layout_second = v;
             txtHeader_second = (TextView) v.findViewById(R.id.firstLine);
-            txtFooter_second = (TextView) v.findViewById(R.id.secondLine);
         }
     }
 
@@ -65,8 +63,6 @@ public class MyAdapterMoto_second extends RecyclerView.Adapter<MyAdapterMoto_sec
         final String model = moto.getModel_Name();
         final Integer ID = moto.getModel_ID();
         holder.txtHeader_second.setText(name +" "+ model);
-        holder.txtFooter_second.setText("ID : " + ID);
-
     }
 
     // Return the size of your dataset (invoked by the layout manager)

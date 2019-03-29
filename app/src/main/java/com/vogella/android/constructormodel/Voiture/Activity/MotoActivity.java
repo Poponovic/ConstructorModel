@@ -3,7 +3,7 @@ package com.vogella.android.constructormodel.Voiture.Activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Button;
 import android.widget.SearchView;
@@ -29,6 +29,7 @@ public class MotoActivity extends Activity implements SearchView.OnQueryTextList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_moto);
         recyclerView_moto = (RecyclerView) findViewById(R.id.my_recycler_view);
+        recyclerView_moto.setLayoutManager(new GridLayoutManager(this, 2));
 
         playbutton_moto = (Button) findViewById(R.id.buttonmoto);
         // use this setting to
@@ -55,8 +56,8 @@ public class MotoActivity extends Activity implements SearchView.OnQueryTextList
 
         recyclerView_moto.setHasFixedSize(true);
         // use a linear layout manager
-        layoutManager_moto = new LinearLayoutManager(this);
-        recyclerView_moto.setLayoutManager(layoutManager_moto);
+        //layoutManager_moto = new LinearLayoutManager(this);
+        //recyclerView_moto.setLayoutManager(layoutManager_moto);
 
         searchView = (SearchView) findViewById(R.id.search_view);
         searchView.setOnQueryTextListener(this);

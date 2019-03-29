@@ -16,13 +16,12 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/image"
             android:layout_width="50dip"
             android:layout_height="50dip"
             android:layout_margin="50dip" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonmoto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="100"

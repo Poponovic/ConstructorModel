@@ -1,13 +1,14 @@
-package com.vogella.android.constructormodel.Voiture.SecondActivity;
+package com.vogella.android.constructormodel.Voiture.Activity;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.vogella.android.constructormodel.R;
-import com.vogella.android.constructormodel.Voiture.SecondActivity.Controller.MainController;
-import com.vogella.android.constructormodel.Voiture.SecondActivity.model.Vehicle;
+import com.vogella.android.constructormodel.Voiture.Controller.MainController;
+import com.vogella.android.constructormodel.Voiture.Model.Vehicle;
 
 import java.util.List;
 
@@ -20,8 +21,13 @@ public class SecondActivity<recyclerView> extends Activity {
     private RecyclerView recyclerView_second;
     private RecyclerView.Adapter mAdapter_second;
     private RecyclerView.LayoutManager layoutManager_second;
-
     private MainController controller;
+    public Vehicle car;
+
+    private static final String PREFS = "PREFS";
+    private static final String PREFS_NAME = "PREFS_NAME";
+
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +38,19 @@ public class SecondActivity<recyclerView> extends Activity {
         // improve performance if you know that changes
         // in content do not change the layout size
         // of the RecyclerView
+
+        /*List<Vehicle> vehicleList;
+
+        sharedPreferences = getBaseContext().getSharedPreferences(PREFS, MODE_PRIVATE);
+        if(sharedPreferences.contains(PREFS_NAME)){
+            sharedPreferences.getString(PREFS_NAME, null);
+        }
+        else{
+            sharedPreferences
+                    .edit()
+                    .putString(PREFS_NAME, null)
+                    .apply();
+        }*/
 
         int id = getIntent().getIntExtra("KEY", 0);
         controller = new MainController(this);

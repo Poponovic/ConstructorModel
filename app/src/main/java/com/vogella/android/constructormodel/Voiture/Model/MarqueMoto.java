@@ -1,10 +1,10 @@
-package com.vogella.android.constructormodel.Voiture.SecondActivity.model;
+package com.vogella.android.constructormodel.Voiture.Model;
 
-public class Marque {
+public class MarqueMoto {
     private String name;
     private int id;
 
-    public Marque(String name, int id) {
+    public MarqueMoto(String name, int id) {
         this.name = name;
         this.id = id;
     }

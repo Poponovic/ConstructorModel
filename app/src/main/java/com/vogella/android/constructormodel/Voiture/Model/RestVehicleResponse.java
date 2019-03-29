@@ -1,16 +1,16 @@
-package com.vogella.android.constructormodel.Voiture.Moto.SecondMotoActivity.Model;
+package com.vogella.android.constructormodel.Voiture.Model;
 
 import java.util.List;
 
-public class RestMotoResponse {
+public class RestVehicleResponse {
     Integer Count;
-    private List<Moto> Results;
+    private List<Vehicle> Results;
 
     public Integer getCount() {
         return Count;
     }
 
-    public List<Moto> getResults() {
+    public List<Vehicle> getResults() {
         return Results;
     }
 
@@ -18,7 +18,7 @@ public class RestMotoResponse {
         this.Count = count;
     }
 
-    public void setResults(List<Moto> results) {
+    public void setResults(List<Vehicle> results) {
         this.Results = results;
     }
 }

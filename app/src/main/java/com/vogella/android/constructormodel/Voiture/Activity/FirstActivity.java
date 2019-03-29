@@ -1,4 +1,4 @@
-package com.vogella.android.constructormodel.Voiture;
+package com.vogella.android.constructormodel.Voiture.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.vogella.android.constructormodel.R;
-import com.vogella.android.constructormodel.Voiture.MainActivity.MainActivity;
-import com.vogella.android.constructormodel.Voiture.Moto.FirstMotoActivity.MotoActivity;
 
 public class FirstActivity extends Activity {
 

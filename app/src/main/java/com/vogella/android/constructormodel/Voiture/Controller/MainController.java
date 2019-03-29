@@ -1,13 +1,12 @@
-package com.vogella.android.constructormodel.Voiture.SecondActivity.Controller;
+package com.vogella.android.constructormodel.Voiture.Controller;
 
 import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.vogella.android.constructormodel.Voiture.SecondActivity.GerritAPI;
-import com.vogella.android.constructormodel.Voiture.SecondActivity.SecondActivity;
-import com.vogella.android.constructormodel.Voiture.SecondActivity.model.RestVehicleResponse;
-import com.vogella.android.constructormodel.Voiture.SecondActivity.model.Vehicle;
+import com.vogella.android.constructormodel.Voiture.Activity.SecondActivity;
+import com.vogella.android.constructormodel.Voiture.Model.RestVehicleResponse;
+import com.vogella.android.constructormodel.Voiture.Model.Vehicle;
 
 import java.util.List;
 
