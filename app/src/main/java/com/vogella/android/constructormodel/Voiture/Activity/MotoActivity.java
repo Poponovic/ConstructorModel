@@ -1,4 +1,4 @@
-package com.vogella.android.constructormodel.Voiture.Moto.FirstMotoActivity;
+package com.vogella.android.constructormodel.Voiture.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,17 +6,18 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Button;
+import android.widget.SearchView;
 
 import com.vogella.android.constructormodel.R;
-import com.vogella.android.constructormodel.Voiture.Moto.SecondMotoActivity.Model.MarqueMoto;
-import com.vogella.android.constructormodel.Voiture.Moto.SecondMotoActivity.MotoActivitySecond;
+import com.vogella.android.constructormodel.Voiture.Model.MarqueMoto;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MotoActivity extends Activity {
+public class MotoActivity extends Activity implements SearchView.OnQueryTextListener {
     private RecyclerView recyclerView_moto;
-    private RecyclerView.Adapter mAdapter_moto;
+    private MyAdapterMoto mAdapter_moto;
+    private SearchView searchView;
     private RecyclerView.LayoutManager layoutManager_moto;
     private Button playbutton_moto;
     Integer id;
@@ -57,6 +58,9 @@ public class MotoActivity extends Activity {
         layoutManager_moto = new LinearLayoutManager(this);
         recyclerView_moto.setLayoutManager(layoutManager_moto);
 
+        searchView = (SearchView) findViewById(R.id.search_view);
+        searchView.setOnQueryTextListener(this);
+
         mAdapter_moto = new MyAdapterMoto(listMarqueMoto, new MyAdapterMoto.OnItemClickListener() {
             @Override
             public void onItemClick(MarqueMoto item) {
@@ -66,5 +70,29 @@ public class MotoActivity extends Activity {
             }
         });
         recyclerView_moto.setAdapter(mAdapter_moto);
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        final List<MarqueMoto> filteredModelList = filter(listMarqueMoto, newText);
+        mAdapter_moto.setFilter(filteredModelList);
+        return false;
+    }
+
+    private List<MarqueMoto> filter(List<MarqueMoto> models, String query){
+        query = query.toLowerCase();
+        final List<MarqueMoto> filteredModelList = new ArrayList<>();
+        for (MarqueMoto model : models) {
+            String text = model.getName().toLowerCase();
+            if (text.contains(query)) {
+                filteredModelList.add(model);
+            }
+        }
+        return filteredModelList;
     }
 }

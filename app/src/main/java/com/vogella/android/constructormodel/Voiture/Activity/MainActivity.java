@@ -1,4 +1,4 @@
-package com.vogella.android.constructormodel.Voiture.MainActivity;
+package com.vogella.android.constructormodel.Voiture.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,22 +6,25 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Button;
+import android.widget.SearchView;
 
 import com.vogella.android.constructormodel.R;
-import com.vogella.android.constructormodel.Voiture.SecondActivity.SecondActivity;
-import com.vogella.android.constructormodel.Voiture.SecondActivity.model.Marque;
+import com.vogella.android.constructormodel.Voiture.Model.Marque;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements SearchView.OnQueryTextListener{
     private RecyclerView recyclerView;
-    private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
+    private SearchView searchView;
     private Button playbutton;
+    private Marque marque;
+    private MyAdapter adapter;
     Integer id;
 
     List<Marque> listMarque;
+    MyAdapter.OnItemClickListener clickListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,8 @@ public class MainActivity extends Activity {
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 
         playbutton = (Button) findViewById(R.id.button);
+
+        adapter = new MyAdapter(listMarque, clickListener);
         // use this setting to
         // improve performance if you know that changes
         // in content do not change the layout size
@@ -85,7 +90,10 @@ public class MainActivity extends Activity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        mAdapter = new MyAdapter(listMarque, new MyAdapter.OnItemClickListener() {
+        searchView = (SearchView) findViewById(R.id.search_view);
+        searchView.setOnQueryTextListener(this);
+
+        adapter = new MyAdapter(listMarque, new MyAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Marque item) {
                 Intent button = new Intent(MainActivity.this, SecondActivity.class);
@@ -93,6 +101,30 @@ public class MainActivity extends Activity {
                 startActivity(button);
             }
         });
-        recyclerView.setAdapter(mAdapter);
+        recyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        final List<Marque> filteredModelList = filter(listMarque, newText);
+        adapter.setFilter(filteredModelList);
+        return false;
+    }
+
+    private List<Marque> filter(List<Marque> models, String query){
+        query = query.toLowerCase();
+        final List<Marque> filteredModelList = new ArrayList<>();
+        for (Marque model : models) {
+            String text = model.getName().toLowerCase();
+            if (text.contains(query)) {
+                filteredModelList.add(model);
+            }
+        }
+        return filteredModelList;
     }
 }
