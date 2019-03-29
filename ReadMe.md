@@ -1,17 +1,17 @@
-Application Voiture et Moto
+<h1>Application Voiture et Moto</h1>
 
 
-Créateur du projet : Junger Damien 3A33
+<p1>Créateur du projet : Junger Damien 3A33</p1>
 
 
-Présentation :
+<h2>Présentation :</h2>
 
 Le projet est une application mobile codée sur Android Studio qui regroupe les modèles de marques de voitures et de motos. 
 
 Cette application affiche donc tous les modèles d'un constructeur recueillis grâce à une API trouvée sur un github qui permet de trier en fonction d'une ID et du type de véhicule du constructeur. 
 
 
-Consignes respectées:
+<h2>Consignes respectées:</h2>
 
 -Architecture & MCV
 
@@ -31,7 +31,7 @@ Consignes respectées:
 
 
 
-Fonctionnalités:
+<h2>Fonctionnalités:</h2>
 
 	#HomePage 
 
