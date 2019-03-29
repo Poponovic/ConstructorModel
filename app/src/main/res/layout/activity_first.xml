@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:animationCache="true"
     android:scrollbarAlwaysDrawVerticalTrack="false"
-    tools:context=".Voiture.Activity.FirstActivity">
+    tools:context=".Voiture.Activity.FirstActivity"
+    android:background="@drawable/imagedefond">
 
     <TextView
         android:id="@+id/textView"

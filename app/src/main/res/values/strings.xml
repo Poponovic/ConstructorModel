@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ConstructorModel</string>
+    <string-array name="vehicles_array">
+        <item>A->Z</item>
+        <item>Z-A</item>
+    </string-array>
 </resources>

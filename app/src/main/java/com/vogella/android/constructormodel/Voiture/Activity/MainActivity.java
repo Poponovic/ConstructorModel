@@ -85,6 +85,8 @@ public class MainActivity extends Activity implements SearchView.OnQueryTextList
         listMarque.add(new Marque("Toyota", 448));
         listMarque.add(new Marque("Volkswagen", 482));
         listMarque.add(new Marque("Volvo", 485));
+        listMarque.add(new Marque("Smart", 504));
+        listMarque.add(new Marque("Saab", 572));
 
         recyclerView.setHasFixedSize(true);
         // use a linear layout manager
