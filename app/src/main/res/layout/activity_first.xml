@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:animationCache="true"
     android:scrollbarAlwaysDrawVerticalTrack="false"
-    tools:context=".Voiture.Activity.FirstActivity"
-    android:background="@drawable/imagedefond">
+    tools:context=".Voiture.Activity.FirstActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -20,6 +19,7 @@
         android:layout_marginRight="50dp"
         android:gravity="center"
         android:text="Bienvenue dans l'application !"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="50dp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +55,8 @@
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:background="@android:color/transparent"/>
 
     <Button
         android:id="@+id/moto"
@@ -72,5 +73,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/voiture" />
+        app:layout_constraintTop_toBottomOf="@+id/voiture"
+        android:background="@android:color/transparent"/>
 </android.support.constraint.ConstraintLayout>

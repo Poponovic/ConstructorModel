@@ -10,25 +10,23 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="15dp"
+        android:padding="20dp"
         android:layout_marginLeft="5dp"
-        android:background="@android:color/white"
-        android:orientation="vertical">
+        android:background="@android:color/transparent"
+        android:layout_centerHorizontal="true">
 
-        <ImageView
-            android:layout_width="50dip"
-            android:layout_height="50dip"
-            android:layout_margin="50dip" />
+
 
         <Button
             android:id="@+id/buttonmoto"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="100"
-            android:background="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="500"
+            android:background="@android:color/transparent"
             android:text="Button"
-            android:textColor="@android:color/black"
-            android:textSize="20dp"/>
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:gravity="center_vertical"/>
 
     </LinearLayout>
 

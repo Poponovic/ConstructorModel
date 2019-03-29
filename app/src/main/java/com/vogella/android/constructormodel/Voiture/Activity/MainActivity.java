@@ -36,10 +36,6 @@ public class MainActivity extends Activity implements SearchView.OnQueryTextList
         playbutton = (Button) findViewById(R.id.button);
 
         adapter = new MyAdapter(listMarque, clickListener);
-        // use this setting to
-        // improve performance if you know that changes
-        // in content do not change the layout size
-        // of the RecyclerView
 
         listMarque = new ArrayList<>();
         listMarque.add(new Marque("Audi", 582));
@@ -89,9 +85,6 @@ public class MainActivity extends Activity implements SearchView.OnQueryTextList
         listMarque.add(new Marque("Saab", 572));
 
         recyclerView.setHasFixedSize(true);
-        // use a linear layout manager
-        //layoutManager = new LinearLayoutManager(this);
-        //recyclerView.setLayoutManager(layoutManager);
 
         searchView = (SearchView) findViewById(R.id.search_view);
         searchView.setOnQueryTextListener(this);

@@ -1,12 +1,10 @@
 package com.vogella.android.constructormodel.Voiture.Activity;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 
 import com.vogella.android.constructormodel.R;
 import com.vogella.android.constructormodel.Voiture.Model.Marque;
@@ -17,7 +15,6 @@ import java.util.List;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private List<Marque> values;
     private final OnItemClickListener listener;
-    private Context context;
 
     public interface OnItemClickListener {
         void onItemClick(Marque item);
@@ -31,14 +28,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         public Button txtHeader;
         public View layout;
         public Button playbutton;
-        public ImageView imageView;
 
         public ViewHolder(View v) {
             super(v);
             layout = v;
             txtHeader = (Button) v.findViewById(R.id.button);
             playbutton = (Button) v.findViewById(R.id.button);
-            imageView = (ImageView) v.findViewById(R.id.image);
         }
     }
 
@@ -68,11 +63,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         // - replace the contents of the view with that element
         final Marque marque = values.get(position);
 
-        /*Glide.with(context)
-                .load(marque.getImage())
-                .into(holder.imageView);*/
-
         holder.txtHeader.setText(marque.getName());
+
         holder.playbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){

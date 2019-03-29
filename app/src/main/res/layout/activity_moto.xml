@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/darker_gray">
+    android:background="@drawable/fondecranmoto">
 
     <!-- A RecyclerView with some commonly used attributes -->
 
@@ -13,6 +13,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginBottom="10dp"
+        android:background="@android:color/white"
         android:queryHint="Search a motorbike" />
 
     <android.support.v7.widget.RecyclerView
